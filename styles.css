@@ -1,0 +1,280 @@
+/* ================== VARIABLES Y MODO OSCURO ================== */
+:root {
+  --fondo: rgba(0, 0, 0, 0.6);
+  --texto: #fff;
+  --boton: linear-gradient(45deg, #ff7b00, #ffcc70);
+  --sombra: rgba(255, 255, 255, 0.3);
+}
+
+.dark {
+  --fondo: rgba(0, 0, 0, 0.7);
+  --texto: #eaeaea;
+  --boton: linear-gradient(45deg, #444, #777);
+  --sombra: rgba(255, 255, 255, 0.1);
+}
+
+/* ================== FONDO GLOBAL ================== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--texto);
+  text-align: center;
+  overflow-x: hidden;
+  transition: background 0.6s ease, color 0.6s ease;
+
+  background-image: url('img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--fondo);
+  z-index: -1;
+}
+
+/* ================== CONTENEDOR ================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ================== LOGO ================== */
+.logo-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #ff7b00;
+  animation: girar 8s linear infinite;
+}
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ================== TITULO ================== */
+.titulo-principal {
+  font-size: 2.5rem;
+  color: #ffcc70;
+  text-shadow: 0 0 20px #ff9a00;
+  margin-top: 10px;
+}
+
+/* ================== DESCRIPCIÓN ================== */
+.descripcion p {
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  margin-top: 20px;
+}
+
+/* ================== BOTONES ================== */
+.botones-navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px auto;
+}
+.botones-navegacion button {
+  width: 90%;
+  max-width: 300px;
+  padding: 14px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: var(--boton);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--sombra);
+  transition: 0.3s;
+}
+.botones-navegacion button:hover {
+  transform: scale(1.08);
+  color: #000;
+}
+
+/* ================== GALERÍA ================== */
+/* 🎨 ===== GALERÍA ===== */
+.galeria {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.titulo-galeria {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffcc70;
+}
+
+/* 🖼️ Cuadrícula uniforme */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+.galeria-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 204, 112, 0.8);
+}
+
+/* 🖼️ Modal para imagen ampliada */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.activo {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 🎥 ===== GALERÍA DE VIDEOS ===== */
+.galeria-grid-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+.video-cuadrado {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.video-cuadrado:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 204, 112, 0.8);
+}
+
+
+/* ================== TIKTOK ================== */
+.tiktok-seguir {
+  margin-top: 40px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+.boton-tiktok {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: var(--boton);
+  border-radius: 25px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.boton-tiktok:hover { transform: scale(1.1); }
+
+/* ================== COMPARTIR ================== */
+.contenedor-compartir {
+  margin-top: 40px;
+}
+.boton-compartir {
+  background: #ff7b00;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  transition: 0.3s;
+}
+.boton-compartir:hover { transform: scale(1.05); }
+.opciones-compartir {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* ================== ANIMACIONES ================== */
+.fade-in { animation: fadeIn 1s ease; }
+.slide-up { animation: slideUp 1s ease; }
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes slideUp { from {transform: translateY(30px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+
+/* ================== BOTÓN CAMBIO TEMA ================== */
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--boton);
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--sombra);
+  transition: 0.3s;
+}
+#theme-toggle:hover { transform: scale(1.1); }
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 600px) {
+  .titulo-principal { font-size: 2rem; }
+  .botones-navegacion button { width: 100%; }
+  .galeria-grid img { border-radius: 10px; }
+  .video-cuadrado { border-radius: 10px; }
+}

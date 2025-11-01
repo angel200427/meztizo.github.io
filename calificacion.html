@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⭐ Califícanos | Meztizo Restobar</title>
+  <link rel="stylesheet" href="styles-calificacion.css" />
+  <script src="script-calificacion.js" defer></script>
+</head>
+<body>
+  <header class="header fade-in">
+    <h1>⭐ Califícanos</h1>
+    <button class="btn-volver" onclick="volverInicio()">⬅️ Volver al Inicio</button>
+  </header>
+
+  <section class="calificacion slide-up">
+    <p>Tu opinión nos ayuda a mejorar. ¡Déjanos tu valoración!</p>
+
+    <div class="pregunta">¿Cómo te pareció la comida?</div>
+    <div class="estrellas" data-pregunta="comida">
+      <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+    </div>
+
+    <div class="pregunta">¿Qué tal fue el servicio?</div>
+    <div class="estrellas" data-pregunta="servicio">
+      <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+    </div>
+
+    <div class="pregunta">¿Cómo calificarías el ambiente?</div>
+    <div class="estrellas" data-pregunta="ambiente">
+      <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+    </div>
+
+    <p id="resultado"></p>
+  </section>
+</body>
+</html>

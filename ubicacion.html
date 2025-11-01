@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📍 Ubicación y Horarios | Meztizo Restobar</title>
+  <link rel="stylesheet" href="styles-ubicacion.css" />
+  <script src="script-ubicacion.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>📍 Ubicación y Horarios</h1>
+    <button class="btn-volver" onclick="volverInicio()">⬅️ Volver al Inicio</button>
+  </header>
+
+  <main class="container">
+    <section class="info card">
+      <p><strong>Dirección:</strong> Garcia Moreno y 24 de Mayo (frente al Banco Pichincha)</p>
+      <p><strong>Teléfono:</strong> +593 96 794 4885 📞</p>
+
+      <h2>🕒 Horarios</h2>
+      <ul>
+        <li>Martes a Domingos: 1:00 p.m. - 22:00 p.m.</li>
+        <li>Lunes: 14:00 p.m. - 22:00 a.m.</li>
+        
+      </ul>
+    </section>
+
+    <section class="mapa card zoom-wrap">
+      <h2>📍 Encuéntranos</h2>
+      <!-- Embed Google Maps con coordenadas exactas -->
+      <div class="map-frame">
+        <iframe
+          id="gmaps"
+          src="https://maps.app.goo.gl/mqLVCN2fp3ho5vDj8"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Meztizo Restobar • Calidad y buena vibra</footer>
+</body>
+</html>

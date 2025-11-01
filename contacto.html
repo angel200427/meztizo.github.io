@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📧 Contacto | Meztizo Restobar</title>
+  <link rel="stylesheet" href="styles-contacto.css" />
+  <script src="script-contacto.js" defer></script>
+</head>
+<body>
+  <header class="header fade-in">
+    <h1>📧 Contáctanos</h1>
+    <p class="frase">✨ “Donde cada brindis se convierte en un recuerdo. ¡Vive la experiencia Meztizo!” ✨</p>
+    <button class="btn-volver" onclick="volverInicio()">⬅️ Volver al Inicio</button>
+  </header>
+
+  <main class="contenedor slide-up">
+    <section class="contacto">
+      <h2>Envíanos un mensaje</h2>
+      <form onsubmit="enviarMensaje(event)">
+        <label for="nombre">👤 Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required />
+
+        <label for="email">📧 Email</label>
+        <input type="email" id="email" placeholder="tu@correo.com" required />
+
+        <label for="mensaje">💬 Mensaje</label>
+        <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+
+        <button type="submit" class="btn-enviar">📨 Enviar Mensaje</button>
+      </form>
+
+      <div class="redes">
+        <h3>Síguenos en redes</h3>
+        <div class="botones-redes">
+          <a href="https://www.facebook.com/politofernando.lascanocevallos" target="_blank" class="btn-red facebook">📘 Facebook</a>
+          <a href="https://www.tiktok.com/@chefpololascano?is_from_webapp=1&sender_device=pc" target="_blank" class="btn-red tiktok">🎵 TikTok</a>
+          <a href="https://wa.me/593967944885" target="_blank" class="btn-red whatsapp">💬 WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

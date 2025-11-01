@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍽️ Menú | Meztizo Restobar</title>
+  <link rel="stylesheet" href="styles-menu.css" />
+  <script src="script-menu.js" defer></script>
+</head>
+<body>
+  <header class="header fade-in">
+    <h1>🍹 Menú Meztizo Restobar</h1>
+    <button class="btn-volver" onclick="volverInicio()">⬅️ Volver al Inicio</button>
+  </header>
+
+  <!-- Menú de bebidas a base de café -->
+  <section class="menu-cafe">
+    <div class="menu-bg"></div>
+    <div class="menu-content">
+      <h2>BEBIDAS A BASE DE CAFÉ</h2>
+      <p class="logo">Mestizo<br><span>Café Restobar</span></p>
+      
+      <div class="menu-item">
+        <h3>Espresso</h3>
+        <p>Extracción de café concentrado y fuerte</p>
+        <span class="price">$1.50</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Café americano</h3>
+        <p>Bebida a base de espresso más agua caliente</p>
+        <span class="price">$1.75</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Capuccino</h3>
+        <p>Bebida a base de espresso y leche creando un balance de aromas y sabor.</p>
+        <span class="price">$2.00</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Macchiato</h3>
+        <p>Bebida a base de espresso con una pequeña cantidad de leche espumada con un sabor intenso del café y un toque de suavidad.</p>
+        <span class="price">$1.75</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Mocaccino</h3>
+        <p>Bebida a base de espresso, leche y chocolate 100% ecuatoriano.</p>
+        <span class="price">$2.25</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Capuccino de Vainilla, menta o almendras</h3>
+        <span class="price">$2.50</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Chocolate de la casa</h3>
+        <span class="price">$2.50</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Chocolate de almendras</h3>
+        <span class="price">$2.50</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Frappés</h3>
+        <p>Frappé de oreo, moca, vainilla o avellana</p>
+        <span class="price">$3.00</span>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+
+    <!-- Menú de Pastas -->
+  <section class="menu-pastas">
+    <div class="menu-bg"></div>
+    <div class="menu-content">
+      <h2>PASTAS</h2>
+      <p class="logo">Mestizo<br><span>Café Restobar</span></p>
+
+      <div class="menu-intro">
+        <p><strong>Todas nuestras pastas tienen la opción de escoger la proteína:</strong></p>
+        <p>Pollo<br>Lomo<br>Camarón</p>
+        <p class="precio">$6.00 sin proteína<br>$8.00 con proteína</p>
+      </div>
+
+      <div class="menu-item">
+        <h3>Carbonara</h3>
+        <p>
+          La pasta carbonara es un plato originario de Italia, de la región de Lacio.
+          Una receta elaborada con yemas de huevo, tocino, queso parmesano y pimienta negra.
+        </p>
+      </div>
+
+      <div class="menu-item">
+        <h3>Bolognesa</h3>
+        <p>
+          Pasta con una salsa espesa, cocinada a fuego lento, elaborada con carne picada, tomate,
+          cebolla, zanahorias y apio, entre otros ingredientes.
+        </p>
+      </div>
+
+      <div class="menu-item">
+        <h3>Alfredo</h3>
+        <p>
+          En homenaje al creador de la receta Alfredo di Lelio, compuesta de 4 ingredientes principales:
+        </p>
+        <ul class="ingredientes">
+          <li>Ajo</li>
+          <li>Mantequilla</li>
+          <li>Queso parmesano</li>
+          <li>Crema de leche</li>
+        </ul>
+      </div>
+
+      <div class="menu-item">
+        <h3>Pomodoro</h3>
+        <p>
+          Pasta bañada en la clásica salsa pomodoro, hecha con base de tomate, ajo fresco y albahaca.
+        </p>
+      </div>
+
+      <div class="menu-item">
+        <h3>Pesto</h3>
+        <p>
+          Una pasta italiana elaborada con hojas de albahaca, aceite de oliva extra virgen,
+          parmesano, pecorino sardo, almendras y ajo.
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
+ <!-- Menú de Cortes -->
+  <section class="menu-cortes">
+    <div class="menu-bg"></div>
+    <div class="menu-content">
+      <h2>CORTES</h2>
+      <p class="logo">Mestizo<br><span>Café Restobar</span></p>
+
+      <div class="menu-item">
+        <h3>Lomo a la parrilla</h3>
+        <p>Media libra (200gr) de lomo a la parrilla, papas fritas o chaucha al perejil, ensalada fresca, chimichurri de la casa y salsas</p>
+        <span class="price">$8.50</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Bife de Chorizo</h3>
+        <p>Media libra (200gr) de bife de chorizo, papas fritas o chaucha al perejil, ensalada fresca, chimichurri de la casa y salsas</p>
+        <span class="price">$9.99</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Rib-eye</h3>
+        <p>Media libra (200gr) corte de carne de res triangular, originario de Brasil, que se obtiene de la parte superior del cuadril</p>
+        <span class="price">$9.99</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Tomahawk</h3>
+        <p>Libra y media (700gr) corte extraído de las costillas delanteras de la res, conservando el hueso</p>
+        <span class="price">$15.00</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Filet mignon</h3>
+        <p>Media libra (200gr) de lomo fino envuelto en tocinetas ahumadas bañadas en salsa de champiñones, papas fritas o chaucha al perejil, ensalada fresca y salsas de la casa.</p>
+        <span class="price">$9.00</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Lomo al vino tinto</h3>
+        <p>Media libra (200gr) de lomo fino bañado sobre salsa demi-glace de vino tinto, papas fritas o chaucha al perejil, ensalada fresca y salsas de la casa.</p>
+        <span class="price">$9.00</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Lomo a las 3 pimientas</h3>
+        <p>Media libra (200gr) de lomo fino bañado en salsa de 3 pimientas, papas fritas o chaucha al perejil, ensalada fresca, salsas de la casa.</p>
+        <span class="price">$9.00</span>
+      </div>
+
+      <div class="menu-item">
+        <h3>Mar y tierra</h3>
+        <p>Media libra (200gr) de lomo fino bañado en salsa de camarones, salprieta, papas fritas o chaucha al perejil, ensalada fresca y salsas de la casa.</p>
+        <span class="price">$9.50</span>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- Sección de Hamburguesas -->
+<section class="menu-hamburguesas">
+  <div class="menu-bg"></div>
+  <div class="menu-content">
+    <h2>HAMBURGUESAS</h2>
+    <p class="logo">Mestizo<br><span>Café Restobar</span></p>
+
+    <div class="menu-item">
+      <h3>Simple</h3>
+      <p>180gr de carne premium, pan artesanal hecho a mano, hojas verdes, tomate, tocino, salsa de la casa, papas fritas</p>
+      <span class="price">$3.50</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Hawaiana</h3>
+      <p>180gr de carne premium, pan artesanal, hojas verdes, tomate, tocino, piña ahumada, salsa de piña, papas fritas</p>
+      <span class="price">$5.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Chesse Burguer</h3>
+      <p>Carne premium, queso cheddar, tocino, cebolla caramelizada, salsa de la casa, papas fritas</p>
+      <span class="price">$5.50</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Hornadera</h3>
+      <p>180gr de carne, 120gr de hornado, queso cheddar, salsa BBQ, papas fritas</p>
+      <span class="price">$7.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Bermeja</h3>
+      <p>Carne brisket, mermelada de tomate, queso mozzarella, salsa de la casa, envuelta en papel flama, papas fritas</p>
+      <span class="price">$7.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Triple Smash</h3>
+      <p>Triple carne de 60gr, triple queso cheddar, triple tocino, salsa de la casa, papas fritas</p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Mestiza</h3>
+      <p>Carne premium, queso cheddar, dip de morrón ahumado, champiñones, salsa de la casa, papas fritas</p>
+      <span class="price">$7.00</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección de Alitas y Piqueos -->
+<section class="menu-piqueos">
+  <div class="menu-bg"></div>
+  <div class="menu-content">
+    <h2>ALITAS Y PIQUEOS</h2>
+    <p class="logo">Mestizo<br><span>Café Restobar</span></p>
+
+    <div class="menu-item">
+      <h3>Alitas BBQ</h3>
+      <p>6 unidades de alitas bañadas en salsa BBQ artesanal, acompañadas de papas gajo y salsa de la casa</p>
+      <span class="price">$5.50</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Alitas Picantes</h3>
+      <p>Alitas cubiertas en salsa picante estilo buffalo, servidas con bastones de apio y dip ranch</p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Nachos Mestizos</h3>
+      <p>Tortillas crocantes, queso fundido, carne molida, guacamole, pico de gallo, jalapeños</p>
+      <span class="price">$7.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Tequeños</h3>
+      <p>Palitos de masa rellenos de queso, acompañados de dip de guayaba ahumada</p>
+      <span class="price">$4.50</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Combo Piqueo Mixto</h3>
+      <p>Alitas, chorizo, tequeños y papas gajo con salsa especial de la casa</p>
+      <span class="price">$9.50</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección Cerdo, Pollo y Parrilla -->
+<section class="menu-parrilla">
+  <div class="menu-bg"></div>
+  <div class="menu-content">
+    <h2>CERDO, POLLO Y PARRILLA</h2>
+    <p class="logo">Mestizo<br><span>Café Restobar</span></p>
+
+    <div class="menu-item">
+      <h3>Costillas BBQ</h3>
+      <p>Costillas de cerdo bañadas en salsa BBQ artesanal, acompañadas de papas gajo y ensalada fresca</p>
+      <span class="price">$9.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Pollo a la Parrilla</h3>
+      <p>Pechuga de pollo a la parrilla marinada en especias de la casa, con papas y ensalada</p>
+      <span class="price">$8.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Churrasco Mestizo</h3>
+      <p>Lomo fino a la parrilla, huevo frito, papas fritas, arroz, aguacate y ensalada</p>
+      <span class="price">$10.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Combo Parrillada</h3>
+      <p>Carne de res, pollo, chorizo y cerdo con guarnición de papas y ensalada especial</p>
+      <span class="price">$15.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Brochetas Mixtas</h3>
+      <p>Brochetas de carne y pollo con vegetales grillados y salsa chimichurri</p>
+      <span class="price">$7.50</span>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Sección Cervezas & Shots -->
+<section class="menu-cervezas">
+  <div class="menu-bg"></div>
+  <div class="menu-content">
+    <h2>Cocteles</h2>
+    <p class="logo">Mestizo<br><span>Café Restobar</span></p>
+
+    <div class="menu-item">
+      <h3>Americano</h3>
+      <p>Campari / Vermouth rojo / Naranja / soda</p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Limoncello Spritz</h3>
+      <p>Limoncello / Limon / Proseco soda</p>
+      <span class="price">$6.50</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Cuba Libre </h3>
+      <p>Ron / Limon  /  Coca Cola </p>
+      <span class="price">$.600</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Mulata</h3>
+      <p>Ron / Cafe / Crema de Cacao / Licor de Cafe / Limon</p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Presidente</h3>
+      <p>Triple sec / Vermouth / Ron / Granadina / Cereza</p>
+      <span class="price">$6.00</span>
+    </div>
+  
+  <div class="menu-item">
+      <h3>Daiquiri</h3>
+      <p>Limon / Ron / Srop </p>
+      <span class="price">$6.00</span>
+    </div>
+ 
+
+  <div class="menu-item">
+      <h3>Mojito</h3>
+      <p>Limon / Ron / Sirope / Hierba Buena / Agua con gas (Puede tener sus variaciones de maracuya y frutos rojos)</p>
+      <span class="price">$6.00</span>
+    </div>
+ 
+
+<div class="menu-item">
+      <h3>Micheladas</h3>
+      <p>Clasica</p>
+      <p>Maracuya</p>
+      <p>Frutos rojos</p>
+      <span class="price">$5.00</span>
+    </div>
+
+
+<div class="menu-item">
+      <h3>Pornstar Martini</h3>
+      <p>Sirope de Vainilla / Vodka / Maracuya / Jugo de Limon / Champagne </p>
+      <span class="price">$6.00</span>
+    </div>
+ 
+
+<div class="menu-item">
+      <h3>Aperol Spritz</h3>
+      <p>Aperol / Proseco / Agua Mineral / Naranja </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+<div class="menu-item">
+      <h3>Hugo Spritz</h3>
+      <p>Sirope de Flores / Proseco / Agua Mineral / Limon </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+<div class="menu-item">
+      <h3>Blue lady</h3>
+      <p>Jugo de Limon / Blue curacao / Gin / Arandanos / Sirope </p>
+      <span class="price">$6.00</span>
+    </div>
+ 
+
+<div class="menu-item">
+      <h3>Caipiriña</h3>
+      <p>Limon / Azucar / Cachaca </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+<div class="menu-item">
+      <h3>Moscow Mule</h3>
+      <p>Hierba Buena/ Vodka / Limon / Ginger Beer </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Piña Colada</h3>
+      <p>Hierba Buena / Vodka / Limon / Ginger Beer </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Cosmopolitan</h3>
+      <p>Frambuesa / Triple sec / Vodka / Limon </p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Daiquiri de Fresa</h3>
+      <p>Fresa / Limon / Ron / Sirope </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+    <div class="menu-item">
+      <h3>Old Fashioned</h3>
+      <p>Naranja / Sirope / Whisky / Angostura Bitters / Cereza </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Blue Hawai</h3>
+      <p>Piña / Crema de Coco / Blue Curacao / Ron / CerezaS  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Martini</h3>
+      <p>Gin / Dry Vermuth / Aceituna  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Manhattan</h3>
+      <p>Angostura Bitters / Whisky / sweet Vermouth / Cerezas </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Whisky Sour</h3>
+      <p>Whisky / Limon / Clara de huevo / Sirope  / Cerezas </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Jager Boom</h3>
+      <p> jagermeister / Energizante / Cerveza  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Gin Tonic</h3>
+      <p>Gin / limon / Agua Tonica  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item multi-price">
+  <div class="item-left">
+    <h3>Sangría</h3>
+    <p>Vino tinto, brandy, mix de frutas, canela, agua con gas</p>
+  </div>
+  <div class="item-right">
+    <div class="price-group">
+      <span class="label">Copa</span>
+      <span class="price">$5.00</span>
+    </div>
+    <div class="price-group">
+      <span class="label">Jarra</span>
+      <span class="price">$12.00</span>
+    </div>
+  </div>
+</div>
+
+
+    <div class="menu-item">
+      <h3>Porto Tonico</h3>
+      <p> Vino Tinto / limon / Agua Tonica  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>French 75</h3>
+      <p>limon / Gin / Champagne / Sirope  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Negroni</h3>
+      <p> Gin / Campari / sweet Vemouth / Naranja </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Paloma</h3>
+      <p>Tequila / Limon / Toronja / Sal  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Margarita</h3>
+      <p>Triple Sec / Tequila / Limon / Sal  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <h3>Cantarito</h3>
+      <p>Tequila / Toronja / Naranja / Agua con Gas / Sal  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Tequila Sunrise</h3>
+      <p>Tequila / Naranja / Granadina / Cereza  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+
+</div>
+
+</section>
+
+  </section>
+</body>
+</html>

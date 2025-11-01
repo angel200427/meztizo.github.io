@@ -1,0 +1,126 @@
+:root {
+  --fondo: linear-gradient(135deg, #1e1e2f, #3d2c8d);
+  --texto: #fff;
+  --boton: linear-gradient(45deg, #ff7b00, #ffcc70);
+  --card: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.btn-volver {
+  margin-top: 0.5rem;
+  background: var(--boton);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-volver:hover {
+  transform: scale(1.05);
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.formulario {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+}
+
+.formulario h2 {
+  margin-bottom: 1.5rem;
+  color: #ffd580;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #ffd580;
+}
+
+.campo input, 
+.campo select {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  width: 100%;
+}
+
+.campo input:focus, 
+.campo select:focus {
+  box-shadow: 0 0 8px #ffcc70;
+}
+
+.btn-reserva {
+  width: 100%;
+  background: var(--boton);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-reserva:hover {
+  transform: scale(1.05);
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

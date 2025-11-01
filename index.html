@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍹 Meztizo Restobar</title>
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="loader.css" />
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="theme.js" defer></script>
+  <script src="loader.js" defer></script>
+</head>
+<body>
+
+  <!-- 🌟 Loader -->
+  <div id="loader">
+    <div class="loader-circle"></div>
+  </div>
+
+  <!-- Botón de cambio de tema -->
+  <button id="theme-toggle" onclick="toggleTheme()">🌙/☀️</button>
+
+  <div class="container">
+
+    <!-- Logo redondo -->
+    <header class="logo-header centrado fade-in">
+      <img src="img/MESTIZO2_-15[1].png" alt="Logo Meztizo Restobar" class="logo" />
+      <h1 class="titulo-principal">Meztizo Café Restobar</h1>
+    </header>
+
+    <!-- Descripción -->
+    <section class="descripcion slide-up">
+      <p>
+        Bienvenidos a <strong>Meztizo Café Restobar</strong>, tu rincón de sabor y diversión. Disfruta de platos únicos,
+        cocteles exóticos, y momentos inolvidables. Perfecto para compartir con amigos o en familia.
+        ¡Te esperamos con los brazos abiertos!
+      </p>
+    </section>
+
+    <!-- Botones de navegación -->
+    <section class="botones-navegacion fade-in">
+      <button onclick="window.location.href='menu.html'">📄 Menú</button>
+      <button onclick="window.location.href='calificacion.html'">⭐ Califícanos</button>
+      <button onclick="window.location.href='ubicacion.html'">📍 Ubicación y Horarios</button>
+      <button onclick="window.location.href='pedidos.html'">🛒 Pedidos a Domicilio</button>
+      <button onclick="window.location.href='reserva.html'">📝 Reserva tu Mesa</button>
+      <button onclick="window.location.href='contacto.html'">📧 Contactar</button>
+    </section>
+
+    <!-- Galería -->
+    <section class="galeria slide-up">
+      <h2 class="titulo-galeria">Galería de Fotos</h2>
+      <div class="galeria-grid">
+        <img src="img/galeria1.jpg" alt="" />
+        <img src="img/galeria2.jpg" alt="" />
+        <img src="img/galeria3.jpg" alt="" />
+        <img src="img/galeria4.jpg" alt="" />
+        <img src="img/galeria5.jpg" alt="" />
+        <img src="img/galeria6.jpg" alt="" />
+        <img src="img/galeria7.jpg" alt="" />
+        <img src="img/galeria8.jpg" alt="" />
+        <img src="img/galeria9.jpg" alt="" />
+        <img src="img/galeria10.jpg" alt="" />
+        <img src="img/galeria11.jpg" alt="" />
+        <img src="img/galeria12.jpg" alt="" />
+        <img src="img/galeria13.jpg" alt="" />
+        <img src="img/galeria14.jpg" alt="" />
+        <img src="img/galeria15.jpg" alt="" />
+        <img src="img/galeria16.jpg" alt="" />
+        <img src="img/galeria17.jpg" alt="" />
+        <img src="img/galeria18.jpg" alt="" />
+        <img src="img/galeria19.jpg" alt="" />
+        <img src="img/galeria20.jpg" alt="" />
+        <img src="img/galeria21.jpg" alt="" />
+        <img src="img/galeria22.jpg" alt="" />
+        <img src="img/galeria23.jpg" alt="" />
+        <img src="img/galeria24.jpg" alt="" />
+        <img src="img/galeria25.jpg" alt="" />
+        <img src="img/galeria26.jpg" alt="" />
+        <img src="img/galeria27.jpg" alt="" />
+        <img src="img/galeria28.jpg" alt="" />
+        <img src="img/galeria29.jpg" alt="" />
+        <img src="img/galeria30.jpg" alt="" />
+        <img src="img/galeria31.jpg" alt="" />
+        <img src="img/galeria32.jpg" alt="" />
+        <img src="img/galeria33.jpg" alt="" />
+        <img src="img/galeria34.jpg" alt="" />
+        <img src="img/galeria35.jpg" alt="" />
+        <img src="img/galeria36.jpg" alt="" />
+        <img src="img/galeria37.jpg" alt="" />
+        <img src="img/galeria38.jpg" alt="" />
+        <img src="img/galeria39.jpg" alt="" />
+        <img src="img/galeria41.jpg" alt="" />
+        
+        <!-- Más imágenes -->
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="galeria slide-up">
+      <h2 class="titulo-galeria">🎥 Videos del Local</h2>
+      <div class="galeria-grid-videos">
+        <video src="video/video1.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+        <video src="video/video2.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+        <video src="video/video3.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+        <!-- Más videos -->
+      </div>
+    </section>
+
+    <!-- TikTok -->
+    <section class="tiktok-seguir centrado animado-tiktok">
+      <h2 class="titulo-tiktok">🕺 ¡Síguenos en TikTok!</h2>
+      <p class="texto-tiktok">¿Te gusta la comida y la diversión? Este TikTok es para ti 🎥🍹</p>
+      <a href="https://www.facebook.com/politofernando.lascanocevallos" target="_blank" class="boton-tiktok animado-boton">📲 Ver más contenido</a>
+      <a href=" https://www.tiktok.com/@chefpololascano?is_from_webapp=1&sender_device=pc" target="_blank" class="boton-tiktok animado-boton">📲 Síguenos</a>
+    </section>
+
+    <!-- Compartir -->
+    <div class="contenedor-compartir fade-in">
+      <button class="boton-compartir" onclick="toggleOpciones()">💌 Compartir</button>
+      <div class="opciones-compartir" id="opcionesCompartir">
+        <button onclick="toggleQR()">📸 Menú QR</button>
+        <img id="qrImage" src="img/frame (4).png" alt="QR del Menú">
+        <button onclick="copiarLink()">🔗 Copiar Link</button>
+        <button onclick="descargarQR()">⬇️ Descargar QR</button>
+        <a id="linkDescargaQR" href="img/frame (4).png" download="frame (4).png" style="display: none;"></a>
+        <button onclick="compartirFacebook()">💙 Facebook</button>
+        <button onclick="compartirWhatsApp()">📱 WhatsApp</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
