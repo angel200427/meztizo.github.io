@@ -52,7 +52,7 @@ function enviarWhatsApp() {
   });
 
   mensaje += `%0A💰 *Total:* $${totalEl.textContent}%0A`;
-  const url = `https://wa.me/593987654321?text=${mensaje}`;
+  const url = `https://wa.me/593967944885?text=${mensaje}`;
   window.open(url, '_blank');
 }
 

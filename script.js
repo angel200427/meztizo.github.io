@@ -37,18 +37,37 @@ imagenes.forEach(img => {
 
 modal.addEventListener("click", () => modal.classList.remove("activo"));
 
-// ====== Reproducir videos al hacer clic ======
+// ====== Reproducir videos al hacer clic (con sonido) ======
 const videos = document.querySelectorAll(".galeria-grid-videos video");
 
 videos.forEach(video => {
+  // Aseguramos que empiece en silencio (autoplay compatible)
+  video.muted = true;
+
   video.addEventListener("click", () => {
+    // Si está pausado → reproducir con sonido
     if (video.paused) {
+      // Pausar los demás videos antes de reproducir este
+      videos.forEach(v => {
+        if (v !== video) {
+          v.pause();
+          v.muted = true;
+          v.style.transform = "scale(1)";
+        }
+      });
+
+      video.muted = false; // Activar sonido
       video.play();
       video.style.transform = "scale(1.05)";
+      video.style.boxShadow = "0 0 15px rgba(255, 204, 112, 0.8)";
     } else {
+      // Si ya está reproduciendo → pausar
       video.pause();
+      video.muted = true;
       video.style.transform = "scale(1)";
+      video.style.boxShadow = "none";
     }
   });
 });
+
 
