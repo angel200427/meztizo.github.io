@@ -13,73 +13,268 @@
     <button class="btn-volver" onclick="volverInicio()">⬅️ Volver al Inicio</button>
   </header>
 
-  <section class="form-datos slide-up">
-  <h2>Datos del Cliente</h2>
-  <div class="campo">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" placeholder="Tu nombre" required>
-  </div>
-  <div class="campo">
-    <label for="telefono">Teléfono</label>
-    <input type="tel" id="telefono" placeholder="Tu número" required>
-  </div>
-  <div class="campo">
-    <label for="direccion">Dirección</label>
-    <input type="text" id="direccion" placeholder="Ej. Av. Central 123" required>
-  </div>
-</section>
+  <main class="container">
+    <section class="form-datos slide-up">
+      <h2>Datos del Cliente</h2>
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+      </div>
+      <div class="campo">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" placeholder="Tu número" required>
+      </div>
+      <div class="campo">
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" placeholder="Ej. Av. Central 123" required>
+      </div>
+    </section>
 
     <section class="pedidos slide-up">
       <h2>Selecciona tus Productos</h2>
 
+      <!-- PASTAS: se crean dos opciones por plato (sin proteína / con proteína) -->
       <div class="categoria">
         <h3>🍝 Pastas</h3>
         <div class="item">
-          <span>Carbonara</span><input type="number" min="0" value="0" data-nombre="Carbonara" data-precio="8.00">
+          <span>Carbonara (sin proteína)</span>
+          <input type="number" min="0" value="0" data-nombre="Carbonara (sin proteína)" data-precio="6.00">
+          <small>$6.00</small>
         </div>
         <div class="item">
-          <span>Bolognesa</span><input type="number" min="0" value="0" data-nombre="Bolognesa" data-precio="8.00">
+          <span>Carbonara (con proteína)</span>
+          <input type="number" min="0" value="0" data-nombre="Carbonara (con proteína)" data-precio="8.00">
+          <small>$8.00</small>
+        </div>
+
+        <div class="item">
+          <span>Bolognesa (sin proteína)</span>
+          <input type="number" min="0" value="0" data-nombre="Bolognesa (sin proteína)" data-precio="6.00">
+          <small>$6.00</small>
         </div>
         <div class="item">
-          <span>Alfredo</span><input type="number" min="0" value="0" data-nombre="Alfredo" data-precio="8.00">
+          <span>Bolognesa (con proteína)</span>
+          <input type="number" min="0" value="0" data-nombre="Bolognesa (con proteína)" data-precio="8.00">
+          <small>$8.00</small>
+        </div>
+
+        <div class="item">
+          <span>Alfredo (sin proteína)</span>
+          <input type="number" min="0" value="0" data-nombre="Alfredo (sin proteína)" data-precio="6.00">
+          <small>$6.00</small>
+        </div>
+        <div class="item">
+          <span>Alfredo (con proteína)</span>
+          <input type="number" min="0" value="0" data-nombre="Alfredo (con proteína)" data-precio="8.00">
+          <small>$8.00</small>
+        </div>
+
+        <div class="item">
+          <span>Pomodoro (sin proteína)</span>
+          <input type="number" min="0" value="0" data-nombre="Pomodoro (sin proteína)" data-precio="6.00">
+          <small>$6.00</small>
+        </div>
+        <div class="item">
+          <span>Pesto (sin proteína)</span>
+          <input type="number" min="0" value="0" data-nombre="Pesto (sin proteína)" data-precio="6.00">
+          <small>$6.00</small>
         </div>
       </div>
 
+      <!-- CORTES -->
       <div class="categoria">
         <h3>🥩 Cortes</h3>
-        <div class="item"><span>Lomo a la parrilla</span><input type="number" min="0" value="0" data-nombre="Lomo a la parrilla" data-precio="8.50"></div>
-        <div class="item"><span>Bife de Chorizo</span><input type="number" min="0" value="0" data-nombre="Bife de Chorizo" data-precio="9.99"></div>
-        <div class="item"><span>Tomahawk</span><input type="number" min="0" value="0" data-nombre="Tomahawk" data-precio="15.00"></div>
+        <div class="item">
+          <span>Lomo a la parrilla</span>
+          <input type="number" min="0" value="0" data-nombre="Lomo a la parrilla" data-precio="8.50">
+          <small>$8.50</small>
+        </div>
+        <div class="item">
+          <span>Bife de Chorizo</span>
+          <input type="number" min="0" value="0" data-nombre="Bife de Chorizo" data-precio="9.99">
+          <small>$9.99</small>
+        </div>
+        <div class="item">
+          <span>Rib-eye</span>
+          <input type="number" min="0" value="0" data-nombre="Rib-eye" data-precio="9.99">
+          <small>$9.99</small>
+        </div>
+        <div class="item">
+          <span>Tomahawk</span>
+          <input type="number" min="0" value="0" data-nombre="Tomahawk" data-precio="15.00">
+          <small>$15.00</small>
+        </div>
+        <div class="item">
+          <span>Filet mignon</span>
+          <input type="number" min="0" value="0" data-nombre="Filet mignon" data-precio="9.50">
+          <small>$9.50</small>
+        </div>
+        <div class="item">
+          <span>Lomo al vino tinto</span>
+          <input type="number" min="0" value="0" data-nombre="Lomo al vino tinto" data-precio="9.50">
+          <small>$9.50</small>
+        </div>
+        <div class="item">
+          <span>Lomo a las 3 pimientas</span>
+          <input type="number" min="0" value="0" data-nombre="Lomo a las 3 pimientas" data-precio="9.50">
+          <small>$9.50</small>
+        </div>
+        <div class="item">
+          <span>Mar y tierra</span>
+          <input type="number" min="0" value="0" data-nombre="Mar y tierra" data-precio="10.00">
+          <small>$10.00</small>
+        </div>
       </div>
 
+      <!-- HAMBURGUESAS -->
       <div class="categoria">
         <h3>🍔 Hamburguesas</h3>
-        <div class="item"><span>Simple</span><input type="number" min="0" value="0" data-nombre="Simple" data-precio="3.50"></div>
-        <div class="item"><span>Chesse Burger</span><input type="number" min="0" value="0" data-nombre="Chesse Burger" data-precio="5.50"></div>
-        <div class="item"><span>Mestiza</span><input type="number" min="0" value="0" data-nombre="Mestiza" data-precio="7.00"></div>
+        <div class="item">
+          <span>Simple</span>
+          <input type="number" min="0" value="0" data-nombre="Simple" data-precio="3.50">
+          <small>$3.50</small>
+        </div>
+        <div class="item">
+          <span>Hawaiana</span>
+          <input type="number" min="0" value="0" data-nombre="Hawaiana" data-precio="5.00">
+          <small>$5.00</small>
+        </div>
+        <div class="item">
+          <span>Chesse Burger</span>
+          <input type="number" min="0" value="0" data-nombre="Chesse Burger" data-precio="5.50">
+          <small>$5.50</small>
+        </div>
+        <div class="item">
+          <span>Hornadera</span>
+          <input type="number" min="0" value="0" data-nombre="Hornadera" data-precio="7.00">
+          <small>$7.00</small>
+        </div>
+        <div class="item">
+          <span>Bermeja</span>
+          <input type="number" min="0" value="0" data-nombre="Bermeja" data-precio="7.00">
+          <small>$7.00</small>
+        </div>
+        <div class="item">
+          <span>Triple Smash</span>
+          <input type="number" min="0" value="0" data-nombre="Triple Smash" data-precio="6.00">
+          <small>$6.00</small>
+        </div>
+        <div class="item">
+          <span>Mestiza</span>
+          <input type="number" min="0" value="0" data-nombre="Mestiza" data-precio="7.00">
+          <small>$7.00</small>
+        </div>
       </div>
 
+      <!-- ALITAS Y PIQUEOS (cada opción como producto separado) -->
       <div class="categoria">
         <h3>🍗 Alitas y Piqueos</h3>
-        <div class="item"><span>Alitas BBQ</span><input type="number" min="0" value="0" data-nombre="Alitas BBQ" data-precio="5.50"></div>
-        <div class="item"><span>Nachos Mestizos</span><input type="number" min="0" value="0" data-nombre="Nachos Mestizos" data-precio="7.00"></div>
-        <div class="item"><span>Tequeños</span><input type="number" min="0" value="0" data-nombre="Tequeños" data-precio="4.50"></div>
+        <div class="item">
+          <span>5 Alitas (1 salsa)</span>
+          <input type="number" min="0" value="0" data-nombre="5 Alitas" data-precio="4.00">
+          <small>$4.00</small>
+        </div>
+        <div class="item">
+          <span>10 Alitas (2 salsas)</span>
+          <input type="number" min="0" value="0" data-nombre="10 Alitas" data-precio="7.50">
+          <small>$7.50</small>
+        </div>
+        <div class="item">
+          <span>15 Alitas (3 salsas)</span>
+          <input type="number" min="0" value="0" data-nombre="15 Alitas" data-precio="10.00">
+          <small>$10.00</small>
+        </div>
+        <div class="item">
+          <span>20 Alitas (4 salsas)</span>
+          <input type="number" min="0" value="0" data-nombre="20 Alitas" data-precio="15.00">
+          <small>$15.00</small>
+        </div>
+        <div class="item">
+          <span>25 Alitas (5 salsas)</span>
+          <input type="number" min="0" value="0" data-nombre="25 Alitas" data-precio="18.00">
+          <small>$18.00</small>
+        </div>
+
+        <div class="item">
+          <span>Nachos</span>
+          <input type="number" min="0" value="0" data-nombre="Nachos" data-precio="3.00">
+          <small>$3.00</small>
+        </div>
+        <div class="item">
+          <span>Chili Nachos</span>
+          <input type="number" min="0" value="0" data-nombre="Chili Nachos" data-precio="5.00">
+          <small>$5.00</small>
+        </div>
+        <div class="item">
+          <span>Pop Corn de pollo</span>
+          <input type="number" min="0" value="0" data-nombre="Pop Corn de pollo" data-precio="3.50">
+          <small>$3.50</small>
+        </div>
+        <div class="item">
+          <span>Sánduche de pollo o lomo</span>
+          <input type="number" min="0" value="0" data-nombre="Sánduche de pollo o lomo" data-precio="6.00">
+          <small>$6.00</small>
+        </div>
       </div>
 
+      <!-- CERDO, POLLO Y PARRILLA -->
       <div class="categoria">
         <h3>🔥 Cerdo, Pollo y Parrilla</h3>
-        <div class="item"><span>Costillas BBQ</span><input type="number" min="0" value="0" data-nombre="Costillas BBQ" data-precio="9.00"></div>
-        <div class="item"><span>Pollo a la Parrilla</span><input type="number" min="0" value="0" data-nombre="Pollo a la Parrilla" data-precio="8.00"></div>
-        <div class="item"><span>Combo Parrillada</span><input type="number" min="0" value="0" data-nombre="Combo Parrillada" data-precio="15.00"></div>
+        <div class="item">
+          <span>Chuletas BBQ / naranjilla</span>
+          <input type="number" min="0" value="0" data-nombre="Chuletas BBQ o naranjilla" data-precio="9.00">
+          <small>$9.00</small>
+        </div>
+        <div class="item">
+          <span>Costillas BBQ / naranjilla</span>
+          <input type="number" min="0" value="0" data-nombre="Costillas BBQ o naranjilla" data-precio="8.00">
+          <small>$8.00</small>
+        </div>
+        <div class="item">
+          <span>Parrillada Mestiza</span>
+          <input type="number" min="0" value="0" data-nombre="Parrillada Mestiza" data-precio="10.00">
+          <small>$10.00</small>
+        </div>
+        <div class="item">
+          <span>Pollo a la Parrilla</span>
+          <input type="number" min="0" value="0" data-nombre="Pollo a la Parrilla" data-precio="15.00">
+          <small>$15.00</small>
+        </div>
+        <div class="item">
+          <span>Pollo en salsa de champiñones</span>
+          <input type="number" min="0" value="0" data-nombre="Pollo en salsa de champiñones" data-precio="7.50">
+          <small>$7.50</small>
+        </div>
+        <div class="item">
+          <span>Pollo a la pimienta</span>
+          <input type="number" min="0" value="0" data-nombre="Pollo a la pimienta" data-precio="7.50">
+          <small>$7.50</small>
+        </div>
       </div>
     </section>
-
-    <aside class="resumen slide-up">
+     <aside class="resumen slide-up">
       <h2>🧾 Resumen de Pedido</h2>
       <ul id="listaResumen"></ul>
+      <p class="subtotal">Subtotal: $<span id="subtotal">0.00</span></p>
+      <p class="contenedor">Contenedor: $<span id="contenedor">0.00</span></p>
       <p class="total">Total: $<span id="total">0.00</span></p>
-      <button class="btn-whatsapp" onclick="enviarWhatsApp()">📱 Enviar Pedido por WhatsApp</button>
+      <button class="btn-whatsapp" id="btnWhats" onclick="enviarWhatsApp()">📱 Enviar Pedido por WhatsApp</button>
     </aside>
   </main>
+
+     <!-- 🌟 MODAL DE PROTEÍNA CON EFECTO VIDRIO (BLUR) -->
+  <div id="modalProteina" class="modal">
+    <div class="modal-content">
+      <h3>Elige tu proteína 🍗</h3>
+      <div class="opciones-proteina">
+        <button data-proteina="Pollo">🐔 Pollo</button>
+        <button data-proteina="Res">🐄 Res</button>
+        <button data-proteina="Camarones">🍤 Camarones</button>
+        <button data-proteina="Cerdo">🐖 Cerdo</button>
+        <button data-proteina="Mixto">🍽️ Mixto</button>
+      </div>
+      <button id="confirmarProteina" class="btn-confirmar">Confirmar Pedido ✅</button>
+    </div>
+  </div>
 </body>
 </html>

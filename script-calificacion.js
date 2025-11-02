@@ -1,15 +1,17 @@
 // ============================
 // 📌 VARIABLES Y ELEMENTOS
 // ============================
-let toqueContador = 0; // Para el panel secreto
+let toqueContador = 0;
 const preguntas = ["comida", "servicio", "ambiente"];
 const panel = document.createElement("div");
 
-// Crear panel deslizable de resultados
+// Crear panel deslizable
 panel.id = "panel";
 panel.innerHTML = `
   <h2>📊 Resultados de Calificaciones</h2>
   <div id="resultados"></div>
+  <h2>📝 Reseñas Guardadas</h2>
+  <div id="reseñasGuardadas"></div>
   <button class="close-btn" onclick="cerrarPanel()">Cerrar</button>
 `;
 document.body.appendChild(panel);
@@ -19,13 +21,9 @@ document.body.appendChild(panel);
 // ============================
 function calificar(pregunta, valor) {
   let datos = JSON.parse(localStorage.getItem("calificaciones")) || {};
-
-  if (!datos[pregunta]) {
-    datos[pregunta] = [];
-  }
+  if (!datos[pregunta]) datos[pregunta] = [];
   datos[pregunta].push(valor);
   localStorage.setItem("calificaciones", JSON.stringify(datos));
-
   mostrarMensaje(`Gracias por calificar la ${pregunta} con ${valor} ⭐`);
 }
 
@@ -36,6 +34,24 @@ function mostrarMensaje(texto) {
   const resultado = document.getElementById("resultado");
   resultado.textContent = texto;
   resultado.style.animation = "fadeIn 0.5s";
+}
+
+// ============================
+// ✍️ GUARDAR RESEÑA
+// ============================
+function guardarReseña() {
+  const texto = document.getElementById("reseña").value.trim();
+  if (texto === "") {
+    mostrarMensaje("Por favor, escribe una reseña antes de guardar.");
+    return;
+  }
+
+  let reseñas = JSON.parse(localStorage.getItem("reseñas")) || [];
+  reseñas.push({ texto, fecha: new Date().toLocaleString() });
+  localStorage.setItem("reseñas", JSON.stringify(reseñas));
+
+  document.getElementById("reseña").value = "";
+  mostrarMensaje("¡Gracias! Tu reseña ha sido guardada.");
 }
 
 // ============================
@@ -56,6 +72,14 @@ function mostrarResultados() {
   });
 
   document.getElementById("resultados").innerHTML = html;
+
+  // Mostrar reseñas guardadas
+  const reseñas = JSON.parse(localStorage.getItem("reseñas")) || [];
+  const reseñasHTML = reseñas.length
+    ? reseñas.map(r => `<div class="reseña-item"><strong>${r.fecha}</strong><br>${r.texto}</div>`).join("")
+    : "<p>No hay reseñas aún.</p>";
+
+  document.getElementById("reseñasGuardadas").innerHTML = reseñasHTML;
 }
 
 // ============================
@@ -65,21 +89,20 @@ function cerrarPanel() {
   panel.classList.remove("active");
 }
 
-// Mostrar panel al hacer 5 toques en pantalla
 document.body.addEventListener("click", () => {
   toqueContador++;
   if (toqueContador >= 5) {
     mostrarResultados();
     panel.classList.add("active");
-    toqueContador = 0; // Reiniciar contador
+    toqueContador = 0;
   }
 });
 
 // ============================
-// 🔙 FUNCIÓN VOLVER AL INICIO
+// 🔙 VOLVER AL INICIO
 // ============================
 function volverInicio() {
-  window.location.href = "index.html"; // Cambia al nombre de tu archivo principal
+  window.location.href = "index.html";
 }
 
 // ============================
@@ -93,8 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
     estrellas.forEach((estrella, index) => {
       estrella.addEventListener("click", () => {
         calificar(pregunta, index + 1);
-
-        // Animación de selección visual
         estrellas.forEach((e, i) => {
           e.style.transform = i <= index ? "scale(1.3)" : "scale(1)";
           e.style.textShadow = i <= index ? "0 0 10px white" : "none";
