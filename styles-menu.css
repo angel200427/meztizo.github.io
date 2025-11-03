@@ -621,3 +621,55 @@ body {
   border-radius: 6px;
   font-weight: bold;
 }
+/* === ANIMACIÓN DEL LOGO MEZTIZO === */
+/* === ANIMACIÓN DEL LOGO === */
+.logo-animada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  animation: aparecerLogo 1.5s ease-out forwards;
+}
+
+.logo-animada img {
+  width: 180px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+  animation: flotar 4s ease-in-out infinite, brillo 3s ease-in-out infinite alternate;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Movimiento flotante */
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Efecto de entrada */
+@keyframes aparecerLogo {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Efecto de brillo */
+@keyframes brillo {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 174, 0, 0.8));
+  }
+}
+
+/* Interacción hover */
+.logo-animada img:hover {
+  transform: scale(1.1) rotate(3deg);
+  filter: drop-shadow(0 0 25px rgba(255, 174, 0, 0.9));
+}

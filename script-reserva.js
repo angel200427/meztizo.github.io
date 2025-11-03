@@ -28,3 +28,23 @@ function enviarReserva(event) {
 function volverInicio() {
   window.location.href = "index.html";
 }
+function enviarReserva(event) {
+  event.preventDefault();
+
+  const nombre = document.getElementById("nombre").value;
+  const telefono = document.getElementById("telefono").value;
+  const evento = document.getElementById("evento").value;
+  const fecha = document.getElementById("fecha").value;
+  const hora = document.getElementById("hora").value;
+  const personas = document.getElementById("personas").value;
+  const tipoPersonas = document.querySelector('input[name="tipo-personas"]:checked').value;
+
+  alert(`Reserva registrada:
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Evento: ${evento}
+Fecha: ${fecha}
+Hora: ${hora}
+Personas: ${personas} (${tipoPersonas})
+`);
+}

@@ -124,3 +124,26 @@ body {
     opacity: 1;
   }
 }
+.opcion-personas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.opcion-personas label {
+  font-size: 0.95rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.opcion-personas input[type="radio"] {
+  accent-color: #ff7b00;
+  transform: scale(1.2);
+  margin-right: 5px;
+}
+
+.opcion-personas label:hover {
+  color: #ffcc70;
+}

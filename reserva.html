@@ -50,10 +50,22 @@
           <input type="time" id="hora" required />
         </div>
 
-        <div class="campo">
-          <label for="personas">👥 Personas</label>
-          <input type="number" id="personas" min="1" max="20" required />
-        </div>
+       <div class="campo">
+  <label for="personas">👥 Personas</label>
+  <input type="number" id="personas" min="1" max="200" required />
+
+  <div class="opcion-personas">
+    <label>
+      <input type="radio" name="tipo-personas" value="exactos" checked />
+      Exactos
+    </label>
+    <label>
+      <input type="radio" name="tipo-personas" value="maximo" />
+      Máximo
+    </label>
+  </div>
+</div>
+
 
         <button type="submit" class="btn-reserva">📩 Enviar Reserva</button>
       </form>
