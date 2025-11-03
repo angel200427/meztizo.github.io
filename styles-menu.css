@@ -673,3 +673,71 @@ body {
   transform: scale(1.1) rotate(3deg);
   filter: drop-shadow(0 0 25px rgba(255, 174, 0, 0.9));
 }
+/* === CONTENEDOR COMPARTIR === */
+.contenedor-compartir {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.boton-compartir {
+  background: linear-gradient(45deg, #ff9d00, #ffcc70);
+  border: none;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-compartir:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 200, 0, 0.7);
+}
+
+/* === OPCIONES DE COMPARTIR === */
+.opciones-compartir {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.opciones-compartir button {
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.opciones-compartir button:hover {
+  background: #ffb300;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* === IMAGEN QR === */
+#qrImage {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  border-radius: 10px;
+  display: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: aparecerQR 0.5s ease;
+}
+
+/* Animaciones */
+@keyframes aparecerQR {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
