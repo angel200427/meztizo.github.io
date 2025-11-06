@@ -1,3 +1,5 @@
+// script-reserva.js
+
 function enviarReserva(event) {
   event.preventDefault();
 
@@ -7,44 +9,32 @@ function enviarReserva(event) {
   const fecha = document.getElementById("fecha").value;
   const hora = document.getElementById("hora").value;
   const personas = document.getElementById("personas").value;
+  const tipoPersonas = document.querySelector('input[name="tipo-personas"]:checked').value;
 
   if (!nombre || !telefono || !fecha || !hora || !personas || !evento) {
-    alert("Por favor completa todos los campos antes de enviar.");
+    alert("⚠️ Por favor completa todos los campos antes de enviar.");
     return;
   }
 
-  const mensaje = `*Reserva de Mesa - Meztizo Restobar*%0A
-👤 *Nombre:* ${nombre}%0A
-📞 *Teléfono:* ${telefono}%0A
-🎉 *Tipo de evento:* ${evento}%0A
-📅 *Fecha:* ${fecha}%0A
-⏰ *Hora:* ${hora}%0A
-👥 *Personas:* ${personas}%0A`;
+  // ✅ Mensaje de WhatsApp
+  const mensaje = `
+*📝 Reserva de Mesa - Meztizo Restobar*
+👤 *Nombre:* ${nombre}
+📞 *Teléfono:* ${telefono}
+🎉 *Evento:* ${evento}
+📅 *Fecha:* ${fecha}
+⏰ *Hora:* ${hora}
+👥 *Personas:* ${personas} (${tipoPersonas})
+`;
 
-  const url = `https://wa.me/593967944885?text=${mensaje}`;
+  // ✅ Cambia el número de WhatsApp si es necesario
+  const numeroWhatsApp = "593967944885";
+  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
   window.open(url, "_blank");
 }
 
+// 🔙 Botón para volver al inicio
 function volverInicio() {
   window.location.href = "index.html";
-}
-function enviarReserva(event) {
-  event.preventDefault();
-
-  const nombre = document.getElementById("nombre").value;
-  const telefono = document.getElementById("telefono").value;
-  const evento = document.getElementById("evento").value;
-  const fecha = document.getElementById("fecha").value;
-  const hora = document.getElementById("hora").value;
-  const personas = document.getElementById("personas").value;
-  const tipoPersonas = document.querySelector('input[name="tipo-personas"]:checked').value;
-
-  alert(`Reserva registrada:
-Nombre: ${nombre}
-Teléfono: ${telefono}
-Evento: ${evento}
-Fecha: ${fecha}
-Hora: ${hora}
-Personas: ${personas} (${tipoPersonas})
-`);
 }
