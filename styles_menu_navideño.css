@@ -1,0 +1,611 @@
+/* 🌲 ESTILOS GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  background: #004d26; /* verde navideño */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Fondo de nieve (canvas) */
+#snow-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+/* 🔝 Botón Volver al Inicio */
+.btn-volver {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 50;
+  background: linear-gradient(90deg, #d4af37, #f7e58f);
+  color: #004d26;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+  animation: flotar 2s infinite ease-in-out;
+}
+.btn-volver:hover {
+  transform: scale(1.05);
+}
+
+/* ✨ Animación botón flotante */
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* 🎅 Logo animado */
+.logo-animado {
+  text-align: center;
+  margin-top: 100px;
+  animation: fadeIn 2s ease;
+}
+
+.logo-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 15px rgba(255,255,255,0.4);
+  animation: brillo 3s infinite ease-in-out;
+}
+
+.sub-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: -10px;
+}
+
+@keyframes brillo {
+  0%, 100% { text-shadow: 0 0 15px rgba(255,255,255,0.3); }
+  50% { text-shadow: 0 0 25px rgba(255,255,255,0.8); }
+}
+
+/* Encabezado con imagen */
+.hero {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.hero-center-image img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-bottom: 5px solid #d4af37; /* dorado */
+  box-shadow: 0 0 20px rgba(212,175,55,0.5);
+}
+
+/* Carrusel */
+.carousel-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Tarjetas de Menús */
+.card {
+  width: 330px;
+  height: auto;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(212,175,55,0.5);
+}
+
+.card-inner {
+  position: relative;
+  z-index: 3;
+}
+
+.card-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2em;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.section.small {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.text, .drink {
+  color: #f9f9f9;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+
+.price {
+  background: #d4af37;
+  color: #004d26;
+  font-weight: bold;
+  border-radius: 50px;
+  width: 90px;
+  margin: 10px auto;
+  padding: 5px 0;
+  font-size: 1.1em;
+}
+
+/* Botones de Reservar */
+.btn-reserve {
+  background: linear-gradient(45deg, #d4af37, #f8e473);
+  border: none;
+  color: #004d26;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  z-index: 4;
+}
+
+.btn-reserve:hover {
+  background: #fff;
+  color: #004d26;
+  transform: scale(1.05);
+}
+
+.card-actions {
+  margin-top: 15px;
+}
+
+/* Imagen extra (última card) */
+.special-card {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-view-image {
+  background: #d4af37;
+  border: none;
+  color: #004d26;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-view-image:hover {
+  background: #fff;
+  color: #004d26;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+  border-top: 2px solid #d4af37;
+  margin-top: 30px;
+}
+
+/* Modal imagen */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.8);
+}
+
+.image-modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-modal-content img {
+  width: 70%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(212,175,55,0.7);
+}
+
+#imageClose {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* ------------------ MODAL / FORMULARIO (mejorado + animaciones) ------------------ */
+
+/* Contenedor modal (fondo semitransparente) */
+#reserveModal.modal {
+  display: flex;                 /* siempre presente para centrar */
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+
+/* Estado abierto: visible y clickeable */
+#reserveModal.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Caja del modal con entrada animada */
+.modal-content {
+  width: 96%;
+  max-width: 520px;
+  background: #fff;
+  color: #004d26;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transform: translateY(28px) scale(.98);
+  opacity: 0;
+  transition: transform .36s cubic-bezier(.2,.9,.3,1), opacity .36s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cuando el modal padre tiene .open, anima la caja */
+#reserveModal.modal.open .modal-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Título y texto del modal */
+#modalTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: #004d26;
+  margin-bottom: 6px;
+}
+
+.modal-menu-text {
+  color: #3b6b56;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* Formulario: grid para orden (2 columnas en desktop, 1 en móvil) */
+#reserveForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+  align-items: center;
+}
+
+/* Etiquetas ocupan columna completa */
+#reserveForm label {
+  grid-column: 1 / -1;
+  font-weight: 700;
+  color: #004d26;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* Inputs y textarea */
+#reserveForm input[type="text"],
+#reserveForm input[type="number"],
+#reserveForm input[type="date"],
+#reserveForm input[type="time"],
+#reserveForm textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: box-shadow .18s ease, border-color .18s ease, transform .08s ease;
+  background: #fff;
+  color: #004d26;
+}
+
+/* textarea ocupa las dos columnas */
+#reserveForm textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+  min-height: 72px;
+}
+
+/* Input focus — resaltar con tono dorado */
+#reserveForm input:focus,
+#reserveForm textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 6px 18px rgba(212,175,55,0.16), 0 0 0 4px rgba(212,175,55,0.07);
+  transform: translateY(-2px);
+}
+
+/* Botones del modal: ocupan 2 columnas */
+.modal-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+/* Botones visuales */
+.btn-secondary, .btn-submit {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.btn-secondary {
+  background: #2f5b4a;
+  color: #fff;
+}
+
+.btn-secondary:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0,0,0,0.12); }
+
+.btn-submit {
+  background: linear-gradient(90deg,#d4af37,#f7e58f);
+  color: #004d26;
+}
+
+.btn-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(212,175,55,0.18); }
+
+/* Botón cerrar (X) dentro del modal-content */
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  color: #d4af37;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Animación de 'shake' para errores de validación */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+.modal-content.shake {
+  animation: shake .5s ease;
+  border: 2px solid rgba(212,175,55,0.25);
+}
+
+/* Mensaje pequeño de ayuda debajo del campo (estilo) */
+.field-hint {
+  grid-column: 1 / -1;
+  font-size: 0.85rem;
+  color: #6d6d6d;
+  margin-top: 6px;
+}
+
+/* Responsive: en pantallas pequeñas el formulario se apila */
+@media (max-width: 560px) {
+  #reserveForm {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .modal-actions { flex-direction: column-reverse; }
+  .modal-actions button { width: 100%; }
+}
+
+
+.btn-secondary {
+  background: #004d26;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background: #d4af37;
+  color: #004d26;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Botón Regresar al Inicio */
+#btnTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #d4af37;
+  color: #004d26;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+#btnTop:hover {
+  transform: scale(1.1);
+}
+/* ---- MODAL RESERVA ---- */
+#reserveModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+}
+#reserveModal.open {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* Animación "shake" para error */
+@keyframes shake {
+  10%, 90% { transform: translateX(-3px); }
+  20%, 80% { transform: translateX(6px); }
+  30%, 50%, 70% { transform: translateX(-6px); }
+  40%, 60% { transform: translateX(6px); }
+}
+.shake { animation: shake 0.6s; }
+
+/* ---- BOTÓN VOLVER ARRIBA ---- */
+.btn-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: gold;
+  color: #004d26;
+  font-size: 22px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+.btn-top:hover { transform: scale(1.1); }
+/* --- Logo Animado --- */
+.logo-animado {
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeInLogo 2s ease forwards;
+}
+
+.logo-img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #d4af37;
+  box-shadow: 0 0 20px rgba(212,175,55,0.5);
+  animation: bounceIn 1.5s ease;
+}
+
+.logo-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.sub-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: #fff;
+  letter-spacing: 2px;
+  animation: fadeIn 3s ease;
+}
+
+/* --- Animaciones --- */
+@keyframes fadeInLogo {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37; }
+  to { text-shadow: 0 0 20px #fff, 0 0 30px #f8e473; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

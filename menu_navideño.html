@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🎄 Menús Navideños | Meztizo</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles_menu_navideño.css" />
+</head>
+<body>
+  <!-- Nieve global -->
+  <canvas id="snow-canvas"></canvas>
+
+   <!-- 🔝 Botón volver al inicio -->
+  <button class="btn-volver" onclick="volverInicio()">⬅️ Volver al Inicio</button>
+
+  <header class="hero">
+  <!-- Logo animado con imagen -->
+  <div class="logo-animado">
+    <img src="img/menunavideño.jpg" alt="Logo Meztizo" class="logo-img">
+    <h1 class="logo-text">🎄 Mestizo 🎅</h1>
+    <p class="sub-logo">Menús Navideños 2025</p>
+  </div>
+</header>
+
+
+    <main class="carousel-wrap">
+      <section class="carousel" id="carousel">
+
+        <!-- 🔹 MENÚS (1–6) -->
+        <section class="carousel" id="carousel">
+        <!-- CARD 1 -->
+        <article class="card" style="background-image: url('img/menu1.jpg');" data-index="0">
+          <div class="overlay"></div>
+          <div class="card-inner">
+            <h2 class="card-title">Menú 1</h2>
+
+            <div class="section small">Entrada</div>
+            <p class="text">Deconstrucción de causa de camarón</p>
+
+            <div class="section small">Plato principal</div>
+            <p class="text">Lomo fino en su salsa<br>Costillar de cerdo</p>
+
+            <div class="section small">Guarniciones y salsas</div>
+            <p class="text">Arroz a escoger (verde, navideño o nuez);<br>Ensalada Waldorf o rusa, Aligot de papa;<br>Salsas (ciruela pasa, champiñones, maracuyá, pimienta o romero)</p>
+
+            <div class="section small">Postre</div>
+            <p class="text">Torta húmeda de chocolate con helado</p>
+
+            <p class="drink">Bebida soft, espumante, sangría o vino incluido</p>
+
+            <div class="price">17.50</div>
+
+            <div class="card-actions">
+              <button class="btn-reserve" data-menu="Menú 1">Reservar este menú</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card" style="background-image: url('img/menu2.jpg');" data-index="1">
+          <div class="overlay"></div>
+          <div class="card-inner">
+            <h2 class="card-title">Menú 2</h2>
+
+            <div class="section small">Entrada</div>
+            <p class="text">Volován de pollo</p>
+
+            <div class="section small">Plato principal</div>
+            <p class="text">Lomo fino en su salsa<br>Medallones de pavo relleno de carne molida y tocino ahumado</p>
+
+            <div class="section small">Guarniciones y salsas</div>
+            <p class="text">Arroz a escoger (verde, navideño o nuez);<br>Ensalada Waldorf o rusa, Aligot de papa;<br>Salsas (ciruela pasa, champiñones, maracuyá, pimienta o romero)</p>
+
+            <div class="section small">Postre</div>
+            <p class="text">Tiramisú navideño</p>
+
+            <p class="drink">Bebida soft, espumante, sangría o vino incluido</p>
+
+            <div class="price">17.50</div>
+
+            <div class="card-actions">
+              <button class="btn-reserve" data-menu="Menú 2">Reservar este menú</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card" style="background-image: url('img/menu3.jpg');" data-index="2">
+          <div class="overlay"></div>
+          <div class="card-inner">
+            <h2 class="card-title">Menú 3</h2>
+
+            <div class="section small">Entrada</div>
+            <p class="text">Mini ceviche de camarón</p>
+
+            <div class="section small">Plato principal</div>
+            <p class="text">Medallones de pavo relleno de carne molida y tocino ahumado<br>Costillar de cerdo</p>
+
+            <div class="section small">Guarniciones y salsas</div>
+            <p class="text">Arroz a escoger (verde, navideño o nuez);<br>Ensalada Waldorf o rusa, Aligot de papa;<br>Salsas (ciruela pasa, champiñones, maracuyá, pimienta o romero)</p>
+
+            <div class="section small">Postre</div>
+            <p class="text">Red velvet</p>
+
+            <p class="drink">Bebida soft, espumante, sangría o vino incluido</p>
+
+            <div class="price">17.50</div>
+
+            <div class="card-actions">
+              <button class="btn-reserve" data-menu="Menú 3">Reservar este menú</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="card" style="background-image: url('img/menu4.jpg');" data-index="3">
+          <div class="overlay"></div>
+          <div class="card-inner">
+            <h2 class="card-title">Menú 4</h2>
+
+            <div class="section small">Entrada</div>
+            <p class="text">Crema vichyssoise con parmesano</p>
+
+            <div class="section small">Plato principal</div>
+            <p class="text">Medallones de pollo relleno de carne molida y tocino ahumado<br>Costillar de cerdo</p>
+
+            <div class="section small">Guarniciones y salsas</div>
+            <p class="text">Arroz a escoger (verde, navideño o nuez);<br>Ensalada Waldorf o rusa, Aligot de papa;<br>Salsas (ciruela pasa, champiñones, maracuyá, pimienta o romero)</p>
+
+            <div class="section small">Postre</div>
+            <p class="text">Tronco navideño</p>
+
+            <p class="drink">Bebida soft, espumante, sangría o vino incluido</p>
+
+            <div class="price">17.50</div>
+
+            <div class="card-actions">
+              <button class="btn-reserve" data-menu="Menú 4">Reservar este menú</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 5 -->
+        <article class="card" style="background-image: url('img/menu5.jpg');" data-index="4">
+          <div class="overlay"></div>
+          <div class="card-inner">
+            <h2 class="card-title">Menú 5</h2>
+
+            <div class="section small">Entrada</div>
+            <p class="text">Coctel de camarones</p>
+
+            <div class="section small">Plato principal</div>
+            <p class="text">Medallones de pollo relleno de carne molida y tocino ahumado.<br>Cuy rostizado con papas y maní</p>
+
+            <div class="section small">Guarniciones y salsas</div>
+            <p class="text">Arroz a escoger (verde, navideño o nuez);<br>Ensalada Waldorf o rusa, Aligot de papa;<br>Salsas (ciruela pasa, champiñones, maracuyá, pimienta o romero)</p>
+
+            <div class="section small">Postre</div>
+            <p class="text">Tronco navideño</p>
+
+            <p class="drink">Bebida soft, espumante, sangría o vino incluido</p>
+
+            <div class="price">17.50</div>
+
+            <div class="card-actions">
+              <button class="btn-reserve" data-menu="Menú 5">Reservar este menú</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 6 -->
+        <article class="card" style="background-image: url('img/menu6.jpg');" data-index="5">
+          <div class="overlay"></div>
+          <div class="card-inner">
+            <h2 class="card-title">Menú 6</h2>
+
+            <div class="section small">Plato principal</div>
+            <p class="text">Parrillada mixta</p> <p class="text">Pollo al carbón </p> <p class="text">Chuleta de cerdo</p>
+            <div class="section small">Guarniciones y salsas</div>
+            <p class="text">Arroz a escoger (verde, navideño o nuez);<br>Ensalada Waldorf o rusa, de papa chaucha;<br>Salsas (Mayonesa, chimichurri)</p>
+
+            <div class="section small">Postre</div>
+            <p class="text">Torta húmeda de chocolate con helado</p>
+
+            <p class="drink">Bebida soft, espumante, sangría o vino incluido</p>
+
+            <div class="price">8.50</div>
+
+            <div class="card-actions">
+              <button class="btn-reserve" data-menu="Menú 6">Reservar este menú</button>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- 🔹 CARD 7: Imagen adicional (segunda imagen que subiste) -->
+        <article class="card special-card" style="background-image:url('img/Imagen\ de\ WhatsApp\ 2025-11-07\ a\ las\ 01.27.58_7b482bf6.jpg')">
+          <div class="overlay"></div>
+          <div class="card-inner center-content">
+            <button class="btn-view-image" data-img="img/Imagen de WhatsApp 2025-11-07 a las 01.27.58_7b482bf6.jpg">Ver Imagen</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>📞 Reserva con anticipación: <strong>0967944885</strong></p>
+    </footer>
+  </div>
+
+  <!-- Modal para ver imagen -->
+  <div id="imageModal" class="modal">
+    <span id="imageClose">&times;</span>
+    <div class="image-modal-content">
+      <img id="modalImage" src="" alt="Vista ampliada">
+    </div>
+  </div>
+
+  <!-- Modal del formulario -->
+  <div class="modal" id="reserveModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3 id="modalTitle">Reservar Menú</h3>
+      <div id="modalMenuText" class="modal-menu-text"></div>
+
+      <form id="reserveForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="personas">Cantidad de personas (1–200):</label>
+        <input type="number" id="personas" min="1" max="200" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" required>
+
+        <label for="detalle">Detalle o petición:</label>
+        <textarea id="detalle" rows="3" placeholder="Escribe detalles opcionales..."></textarea>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" id="cancelBtn">Cancelar</button>
+          <button type="submit" class="btn-submit">Enviar por WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="scrip_menu_navideño.js"></script>
+</body>
+</html>
